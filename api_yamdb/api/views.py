@@ -13,8 +13,8 @@ from rest_framework.permissions import (AllowAny, IsAuthenticated,
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import USER, Category, Genre, Review, Title, User
 
-from reviews.models import Category, Genre, Review, Title, User, USER
 from .filters import TitleFilter
 from .mixins import ListCreateDestroyMixin
 from .permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrStaffOrReadOnly
@@ -44,7 +44,7 @@ class UserViewSet(viewsets.ModelViewSet):
         if request.method == 'GET':
             serializer = UserSerializer(request.user)
             return Response(serializer.data, status=status.HTTP_200_OK)
-        elif request.method == 'PATCH':
+        else:
             serializer = UserSerializer(
                 request.user, data=request.data, partial=True
             )

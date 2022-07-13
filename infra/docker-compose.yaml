@@ -11,6 +11,7 @@ services:
     build:
       context: ../
       dockerfile: api_yamdb/Dockerfile
+    image: alzania/yamdb
     restart: always
     volumes:
       - static_value:/app/static/
