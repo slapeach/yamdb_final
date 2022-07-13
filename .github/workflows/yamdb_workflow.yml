@@ -33,8 +33,8 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         # перейти в папку, содержащую manage.py — 
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
-        cd yamdb_final/
+        # <корневая_папка_infra_actions>/<папка_проекта>/manage.py
+        # cd ../
         # запустить написанные разработчиком тесты
         pytest
   build_and_push_to_docker_hub:
