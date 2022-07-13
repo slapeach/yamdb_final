@@ -11,7 +11,7 @@ services:
     build:
       context: ../
       dockerfile: api_yamdb/Dockerfile
-    image: alzania/infra_web
+    image: ${{ secrets.DOCKER_USERNAME }}/infra_web
     restart: always
     volumes:
       - static_value:/app/static/
