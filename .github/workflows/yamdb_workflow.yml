@@ -59,7 +59,7 @@ jobs:
           uses: docker/build-push-action@v2 
           with:
             push: true
-            tags: alzania/infra_project:latest
+            tags: alzania/yamdb
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
