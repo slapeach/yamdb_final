@@ -8,7 +8,7 @@ urlpatterns = [
     path('auth/', include('django.contrib.auth.urls')),
     path(
         'redoc/',
-        TemplateView.as_view(template_name='redoc.html'),
+        TemplateView.as_view(template_name='redoc.yaml'),
         name='redoc'
     ),
 ]
